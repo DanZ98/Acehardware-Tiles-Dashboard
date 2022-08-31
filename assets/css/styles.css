@@ -4,7 +4,6 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -151,7 +150,12 @@ Horizontal Bar Navigation Section
   cursor: pointer;
 }
 .nav-container__li .nav-link {
-  padding: 18px !important;
+  padding: 18px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
 }
 
 /**********************************
@@ -166,8 +170,6 @@ Mega Menu Section
   border-top: 9px solid #d40019;
   padding: 26px;
   z-index: 1;
-  -webkit-box-shadow: 0px 7px 22px -5px #000;
-  -moz-box-shadow: 0px 7px 22px -5px #000;
   box-shadow: 0px 7px 22px -5px #000;
 }
 .mega-menu .mega-ul-container {
@@ -229,7 +231,9 @@ Hamburger Mobile Menu Codepen Section
   left: 13px;
   z-index: 2;
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   background-color: #000;
   padding: 8px 8px 4px 8px;
 }
@@ -370,6 +374,9 @@ Hamburger Mobile Menu Codepen Section
 Mobile Section
 **********************************/
 @media only screen and (max-width: 1200px) {
+  .marketing-link {
+    padding: 25px 18px !important;
+  }
   .mega-menu {
     position: absolute;
     top: 68px !important;
@@ -463,7 +470,6 @@ Store Profile Section
   display: inline-block;
   height: 1.1rem;
   position: relative;
-  -webkit-transform: rotate(49deg);
   transform: rotate(49deg);
   width: 1.2rem;
   color: #fff;
@@ -483,8 +489,6 @@ Store Profile Section
 .store-number__profile {
   width: 34px;
   height: auto;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 .store-number__profile-name {
@@ -500,7 +504,6 @@ Store Profile Section
   display: inline-block;
   height: 1.1rem;
   position: relative;
-  -webkit-transform: rotate(137deg);
   transform: rotate(137deg);
   width: 1.2rem;
   color: #fff;
@@ -561,7 +564,6 @@ Product search and cart Section
   display: inline-block;
   height: 1.1rem;
   position: relative;
-  -webkit-transform: rotate(137deg);
   transform: rotate(137deg);
   width: 1.2rem;
   color: #fff;
@@ -694,21 +696,13 @@ Tile Dashboard Section
   font-size: 2.4rem;
   text-align: center;
   color: #373a3c;
-  -webkit-border-radius: 18px;
-  -moz-border-radius: 18px;
-  -ms-border-radius: 18px;
-  border-radius: 18px;
-  -webkit-box-shadow: 0px 0px 10px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow: 0px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
+  border-radius: 18px; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */ /* Firefox 3.5 - 3.6 */
   -ms-box-shadow: 0px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
   box-shadow: 0px 0px 10px 0px #ccc;
   transition: ease all 0.4s;
 }
 .tiles__card:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 .tiles__card--invested {
@@ -841,9 +835,6 @@ Tile Dashboard Section
   background-color: #333333;
   color: #fff;
   border: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
   border-radius: 5px;
   font-size: 16px;
   font-family: "Roboto", "Helvetica", Arial, "Lucida Grande", sans-serif;
@@ -857,7 +848,6 @@ Tile Dashboard Section
   right: 0.5rem;
   position: relative;
   top: 0.06rem;
-  -webkit-transform: rotate(230deg);
   transform: rotate(226deg);
   width: 1.2rem;
   color: #fff;
@@ -873,9 +863,6 @@ Tile Dashboard Section
   background-color: #d40029;
   color: #fff;
   border: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
   border-radius: 5px;
   font-size: 16px;
   font-family: "Roboto", "Helvetica", Arial, "Lucida Grande", sans-serif;
@@ -890,7 +877,6 @@ Tile Dashboard Section
   right: 0.5rem;
   position: relative;
   top: 0.06rem;
-  -webkit-transform: rotate(46deg);
   transform: rotate(46deg);
   width: 1.2rem;
   color: #fff;
@@ -999,7 +985,6 @@ Contact Info Section
   position: absolute;
   left: 6px;
   bottom: 0;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .contact-info__message-btn:hover:before {
