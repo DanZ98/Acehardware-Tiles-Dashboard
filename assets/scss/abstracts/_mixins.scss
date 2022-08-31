@@ -1,0 +1,232 @@
+@use '../abstracts/variables' as *;
+
+/* ######################## 
+    Mixins
+ ######################## */
+
+/* Display fex center */
+@mixin displayFlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Font Weight */
+@mixin fontWeight($weight) {
+    font-weight: $weight;
+}
+
+/* Chevron Down Arrow */
+@mixin chevronDown {
+    margin: 0 0 7px 10px;
+    border-style: solid;
+    border-width: 0.2rem 0.2rem 0 0;
+    content: '';
+    display: inline-block;
+    height: 1.1rem;
+    position: relative;
+    -webkit-transform: rotate(137deg);
+    transform: rotate(137deg);
+    width: 1.2rem;
+    color: $color-white;
+    opacity: .95;
+    left: 0.4rem;
+}
+
+/* Border Radius */
+@mixin borderRadius {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Transition */
+@mixin transition {
+    transition: ease all .4s;
+}
+
+/* Standard Popup Styles */
+@mixin HeaderPopup() {
+    background-color: $color-red-ace;
+    color: $color-white;
+    font-family: $fontfamily-RobotoSlab;
+    font-size: $fontsize-21;
+    height: 6.4rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 2.4rem;
+}
+
+@mixin popupHeader() {
+    background-color: $color-red-ace;
+    height: 6.4rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+@mixin popupHeaderTitle() {
+    padding-top: 1.7rem;
+    font-family: $fontfamily-RobotoSlab;
+    font-size: $fontsize-21;
+}
+
+@mixin popupHeaderCloseBtn() {
+    margin-top: 1.1rem;
+    font-size: 3.5rem;
+    font-family: $fontfamily-Roboto;
+    margin-right: 1rem;
+}
+
+@mixin FooterPopupBtn() {
+    width: 12rem;
+    height: 3.9rem;
+    font-size: $fontsize-16;
+    font-family: $fontfamily-Roboto;
+    background: none !important;
+    @include fontWeight(300);
+    @include borderRadius;
+}
+
+@mixin popupHeaderCloseBtnStyle() {
+    color: $color-white;
+    font-weight: 300;
+}
+
+/* Checkout Btns */
+@mixin CheckoutBtns() {
+    border: none;
+    font-family: $fontfamily-Roboto;
+    letter-spacing: $letterSpacing;
+    font-size: $fontsize-16;
+    @include fontWeight(400);
+}
+
+/* Border Radius */
+@mixin borderRadius() {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Font Weight */
+@mixin fontWeight($weight) {
+    font-weight: $weight;
+}
+
+@mixin planCard() {
+    position: relative;
+    width: 25.5rem;
+    height: 23.2rem;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: $color-md-gray;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    border-radius: 18px;
+    -webkit-box-shadow: 0px 0px 10px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
+    -ms-box-shadow: 0px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+@mixin planCardBoostrap() {
+    position: relative;
+    width: 100%;
+    height: 232px;
+    font-size: 2.4rem;
+    text-align: center;
+    color: $color-md-gray;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    border-radius: 18px;
+    -webkit-box-shadow: 0px 0px 10px 0px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
+    -ms-box-shadow: 0px 0px 10px 0px #ccc; /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+/* Card Active Red Effect */
+@mixin planCardRedBorder() {
+    -webkit-border: 1px solid #d42009;
+    -moz-border: 1px solid #d42009;
+    -ms-border: 1px solid #d42009;
+    border: 1px solid #d42009;
+    -webkit-box-shadow: 0px 0px 9px 0px #d42009;
+    -moz-box-shadow: 0px 0px 9px 0px #d42009;
+    -ms-box-shadow: 0px 0px 9px 0px #d42009;
+    box-shadow: 0px 0px 9px 0px #d42009;
+}
+
+@mixin mdWidth() {
+    margin: 0 auto;
+    width: 102.5rem;
+}
+
+/* Back Btn */
+@mixin backBtn() {
+    width: 120px;
+    height: 39px;
+    background-color: $backBtnGray;
+    color: $color-white;
+    border: none;
+    @include borderRadius;
+    font-size: $fontsize-16;
+    font-family: $fontfamily-Roboto;
+}
+
+@mixin nextBtn() {
+    width: 120px;
+    height: 39px;
+    background-color: $color-red-ace;
+    color: $color-white;
+    border: none;
+    @include borderRadius;
+    font-size: $fontsize-16;
+    font-family: $fontfamily-Roboto;
+}
+
+/* Manage Btn */
+@mixin manageBtn() {
+    width: 18rem;
+    height: 4rem;
+    color: $color-white;
+    background-color: $color-red-ace;
+    @include borderRadius;
+    font-size: $fontsize-16;
+    font-family: $fontfamily-Roboto;
+    border: none;
+}
+
+/* Pagination Dots */
+@mixin paginationDots() {
+    list-style: none;
+    border: 1px solid #d40029;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0px 5px;
+}
+
+@mixin cardExpandEffect() {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/*Manage Grid Input Fields*/
+@mixin editableGridInput() {
+    border: 1px solid #ced4da;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 5px;
+    cursor: pointer;
+    background-color: $color-white;
+    overflow: hidden;
+    height: 25px;
+}

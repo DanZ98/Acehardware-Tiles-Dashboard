@@ -1,0 +1,65 @@
+/* ######################## 
+    Global Styles
+ ######################## */
+
+ * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    /* Set root font size to 10px. Easier to calculate in REM units by 10 */
+    font-size: 62.5%;
+    /*Add smooth scrolling effect*/
+    scroll-behavior: smooth
+}
+
+body {
+    /* Set body font size to 16px */
+    font-size: 1.6rem;
+    font-family: 'Roboto', 'Helvetica', Arial, 'Lucida Grande', sans-serif;
+}
+
+/* ######################## 
+    Variables
+ ######################## */
+
+/*Colors*/
+$color-red-ace: #d40029;
+$aquaColor: #00b5ce;
+$bluePrimaryColor: #0069D9;
+$color-black: #000;
+$color-white: #fff;
+$aceGray: #515151;
+$aceGray30: #eeeeee;
+$aceGray50: #d1d1d1;
+$color-md-gray: #373a3c;
+$darkgray: #707070;
+$backBtnGray: #333333;
+$blueLink: #007BFF;
+$gridFooterGray: #F8F9FA;
+$color-btn-hover: #AE0022;
+
+/* Font Size */
+$fontsize-21: 21px;
+$fontsize-18: 18px;
+$fontsize-16: 16px;
+$fontsize-15: 15px;
+$fontsize-14: 14px;
+
+/* Font Family */
+$fontfamily-RobotoCondensed: 'Roboto Condensed', Arial, Arial, Helvetica, sans-serif;
+$fontfamily-Roboto: 'Roboto', 'Helvetica', Arial, 'Lucida Grande', sans-serif;
+$fontfamily-RobotoSlab: 'Roboto Slab', Arial, Arial, Helvetica, sans-serif;
+
+$letterSpacing: normal;
+$displayFlex: flex;
+$lineHeight: normal;
+
+// Effects
+$transition-effect: ease all .4s;
+
+// Flex
+$display-flex: flex;

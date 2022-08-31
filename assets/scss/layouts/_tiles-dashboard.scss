@@ -1,0 +1,302 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/**********************************
+Tile Dashboard Section
+**********************************/
+/*Projected sales section*/
+.menu-pagination {
+
+    &__ul {
+        @include displayFlexCenter;
+        margin: 14px 0 29px 0;
+        justify-content: center;
+    }
+
+    &__li {
+        @include paginationDots;
+    }
+
+    &__li:nth-child(1), &__li:nth-child(2) {
+        background-color: $color-red-ace;
+    }
+}
+
+.projected-sales {
+    margin: 0 20px;
+
+    &__based, &__brand-assessment, &__plan-invested {
+        margin-bottom: 7px;
+        font-size: 21px;
+        color: $color-md-gray;
+        text-align: center;
+        line-height: $lineHeight;
+    }
+
+    &__annual, &__tiles-amount {
+        color: $color-red-ace;
+    }
+
+    &__plan-invested {
+        margin-top: 32px;
+    }
+
+    &__marketing-initiative {
+        text-align: center;
+        color: #8b8b8b;
+        margin-bottom: 35px;
+    }
+}
+
+/*Tiles section*/
+.col-card {
+    margin-bottom: 40px !important;
+}
+
+.tiles {
+    margin: 0 20px;
+
+    &__card {
+        @include planCardBoostrap;
+        transition: $transition-effect;
+    }
+
+    &__card:hover {
+        cursor: pointer;
+        @include cardExpandEffect;
+    }
+
+    &__card--invested {
+        pointer-events: none;
+        border: 1px solid $color-red-ace !important;
+    }
+
+    .card-img-container {
+        height: 84px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        margin-top: 15px;
+    }
+
+    &__img--otherlocal {
+        max-width: 129px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    &__img--grandopening {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        width: 100%;
+        max-width: 236px;
+        margin: 0 auto;
+    }
+
+    &__status {
+        position: absolute;
+        right: 0;
+    }
+
+    &__targeted {
+        margin: 3px 0;
+        font-size: 14px;
+        color: $color-md-gray;
+        line-height: $lineHeight;
+        height: 36px;
+    }
+
+    &__target-header {
+        height: 18px;
+    }
+
+    &__targeted--newstore {
+        margin-top: 8px;
+    }
+
+    &__card--invested {
+        overflow: hidden;
+        box-shadow: none;
+        border: 1px solid #d1d1d1;
+    }
+
+    &__percentage {
+        margin-bottom: 16px;
+        font-size: 46px;
+        color: $color-black;
+    }
+
+    &__rewards-value {
+        color: $color-md-gray;
+        font-size: 18px;
+    }
+
+    &__invested-label {
+        padding-top: 8px;
+        margin-bottom: 0;
+        color: #8b8b8b;
+        font-size: $fontsize-16;
+        line-height: normal;
+    }
+
+    &__invested-value {
+        margin-top: 2px;
+        margin-bottom: 11px;
+        font-size: 24px;
+        color: $color-black;
+        line-height: normal;
+    }
+
+    &__remain-label {
+        margin-bottom: 0;
+        font-size: 16px;
+        color: $color-red-ace;
+        line-height: normal;
+    }
+
+    &__remain-value {
+        color: $color-red-ace;
+    }
+
+    &__footer {
+        margin-top: 15px;
+        height: 100vh;
+        background-color: #eee;
+    }
+
+    &__ul-container {
+        margin-top: 5px;
+        justify-content: center;
+        @include displayFlexCenter;
+    }
+
+    &__additional-opp {
+        margin-bottom: 0;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 13px;
+        color: $color-black;
+    }
+
+    &__addtional-ul {
+        font-size: 16px;
+        margin-top: 4px;
+        line-height: normal;
+        color: $color-black;
+        text-align: left;
+        list-style: initial;
+    }
+}
+
+.col-card {
+    margin-bottom: 20px;
+}
+
+/*Tiles footer section*/
+.tiles-footer {
+
+    &__btn-container {
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 0 15px 20px 15px;
+    }
+
+    &__btn--back-btn {
+        transition: $transition-effect;
+        @include backBtn;
+    }
+
+    &__btn--back-btn::before {
+        border-style: solid;
+        border-width: 0.2rem 0.2rem 0 0;
+        content: '';
+        display: inline-block;
+        height: 1.1rem;
+        right: 0.5rem;
+        position: relative;
+        top: 0.06rem;
+        -webkit-transform: rotate(230deg);
+        transform: rotate(226deg);
+        width: 1.2rem;
+        color: $color-white;
+        right: 0.3rem;
+        opacity: .95;
+    }
+
+    &__btn--back-btn:hover {
+        background-color: #000;
+    }
+
+    &__btn--next-btn {
+        @include nextBtn;
+        transition: $transition-effect;
+    }
+
+    &__btn--next-btn::after {
+        border-style: solid;
+        border-width: 0.2rem 0.2rem 0 0;
+        content: '';
+        display: inline-block;
+        height: 1.1rem;
+        right: 0.5rem;
+        position: relative;
+        top: 0.06rem;
+        -webkit-transform: rotate(46deg);
+        transform: rotate(46deg);
+        width: 1.2rem;
+        color: #fff;
+        right: -0.25rem;
+        opacity: .95;
+    }
+
+    &__btn--next-btn:hover {
+        background-color: #AE0022;
+    }
+
+    &__link-container {
+        margin: 27px 20px 82px 20px;
+        text-align: center;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $blueLink;
+        text-decoration: underline;
+    }
+
+    &__link:hover {
+        color: $blueLink;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .tiles__card {
+        height: 268px;
+    }
+
+    .tiles__targeted {
+        height: 72px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    .tiles__invested-value, .tiles__remain-value {
+        font-size: 20px;
+    }
+
+    .tiles__remain-value {
+        margin-bottom: 0;
+    }
+}
